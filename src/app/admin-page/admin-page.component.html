@@ -1,0 +1,29 @@
+
+ <button (click)="logout()" routerLink="../../login">Logout</button>
+<h2>
+  Admin
+</h2>
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Projects</th>
+      <th scope="col">Change user role </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <th>{{ user.id }}</th>
+      <th> {{ user.name }}</th>
+      <th> {{ user.email }}</th>
+      <th> {{ user.role }}</th>
+      <th><button (click)="projects(user.id)">Projects</button> </th>
+      <th><button (click)="changeRole(user.id)">ChangeRole</button></th>
+    </tr>
+
+  </tbody>
+</table>

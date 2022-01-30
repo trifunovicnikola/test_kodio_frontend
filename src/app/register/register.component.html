@@ -1,0 +1,28 @@
+
+<div *ngIf="login_register == 1">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+
+    <!-- Login Form -->
+
+      <form [formGroup]="input_register">
+        <input type="text" id="login" class="fadeIn second" placeholder="email" formControlName="email">
+        <input type="text" class="fadeIn third"  placeholder="name" formControlName="name">
+        <input type="text" id="password" class="fadeIn third"  placeholder="password" formControlName="password">
+        <input type="submit" value="Register" class="fadeIn fourth" (click)="register()">
+        <input type="submit" value="Login" class="fadeIn fourth" (click)="login()">
+      </form>
+
+
+
+
+
+  </div>
+</div>
+
+</div>
+
+<div *ngIf="login_register == 0">
+  <app-login></app-login>
+</div>
